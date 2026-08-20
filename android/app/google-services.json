@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885646030804",
+    "project_id": "srd104d1app-b73a9",
+    "storage_bucket": "srd104d1app-b73a9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885646030804:android:0289dbe7b2cea58da7c841",
+        "android_client_info": {
+          "package_name": "seyha.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1zsBHU4RkH44rNEkpPuE8-aBmE45679k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
