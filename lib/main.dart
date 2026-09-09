@@ -1,10 +1,12 @@
+import 'package:bbusrd104/routes/app_screens.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:bbusrd104/app_auth.dart';
+// import 'package:bbusrd104/app_auth.dart';
 import 'package:bbusrd104/config/app_colors.dart';
+import 'package:get/route_manager.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarThemeData(
@@ -56,7 +58,10 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: AppColors.white),
         ), // AppBarThemeData
       ),
-      home: const AppAuth(), // home screen / launcher screen / startup s
+      
+      //home: const AppAuth(), // home screen / launcher screen / startup s
+      initialRoute: AppScreens.home,
+      getPages: AppScreens.routes, 
       builder: EasyLoading.init(),
     ); // MaterialApp
   }

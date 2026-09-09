@@ -3,7 +3,7 @@ import 'package:bbusrd104/config/app_colors.dart';
 import 'package:bbusrd104/menu/Popular_items.dart';
 import 'package:bbusrd104/menu/favorite_items.dart';
 import 'package:bbusrd104/menu/navigation_menu.dart';
-import 'package:bbusrd104/screens/cards/category_screen.dart';
+import 'package:bbusrd104/screens/cards/categories/category_screen.dart';
 import 'package:bbusrd104/screens/cards/contact_screen.dart';
 import 'package:bbusrd104/screens/cards/group_screen.dart';
 import 'package:bbusrd104/screens/cards/help_screen.dart';
