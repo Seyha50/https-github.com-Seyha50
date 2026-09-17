@@ -53,9 +53,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 //     );
 //   }
 // }
-
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class ContactModel {
   // Fields
   final String id;
