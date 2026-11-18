@@ -1,6 +1,7 @@
 import 'package:bbusrd104/config/app_colors.dart';
 import 'package:bbusrd104/controllers/category_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
 class AddCategory extends GetView <CategoryController> {
@@ -45,7 +46,7 @@ class AddCategory extends GetView <CategoryController> {
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 35),
           SizedBox(
             width: double.infinity,
             height: 50,
@@ -61,35 +62,30 @@ class AddCategory extends GetView <CategoryController> {
               ),
               onPressed:
               controller.isLoading.value ? null : () async {
-                // Handle save action
                 if (keyform.currentState!.validate()) {
+                  EasyLoading.show();
                   final success = await controller.addCategory(
                     categoryName: txtname.text,
                     description: txtdesc.text
                   );
+                  EasyLoading.dismiss();
 
                   if (success == true) {
                     Get.back();
-                  } else {
-                    Get.snackbar('Success', 'Category added successfully',
-                    snackPosition: SnackPosition.BOTTOM,
-                    duration: const Duration(seconds: 5),
-                    );
-                    
+                    EasyLoading.showSuccess('Category added!');
                   }
                 }
               },
               child:
               controller.isLoading.value
                   ? const SizedBox(
-                      width: 20,
-                      height: 20,
+                      width: 22,
+                      height: 22,
                       child: CircularProgressIndicator(
                         color: AppColors.bgColor,
                       ),
                     )
-                  :
-              const Text('Save'),
+                  : const Text('Save'),
             );
             }),          
           ),

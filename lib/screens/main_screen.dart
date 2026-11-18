@@ -3,12 +3,13 @@ import 'package:bbusrd104/config/app_colors.dart';
 import 'package:bbusrd104/menu/Popular_items.dart';
 import 'package:bbusrd104/menu/favorite_items.dart';
 import 'package:bbusrd104/menu/navigation_menu.dart';
-import 'package:bbusrd104/screens/cards/categories/category_screen.dart';
+import 'package:bbusrd104/routes/app_routes.dart';
 import 'package:bbusrd104/screens/cards/contact_screen.dart';
 import 'package:bbusrd104/screens/cards/group_screen.dart';
 import 'package:bbusrd104/screens/cards/help_screen.dart';
 import 'package:bbusrd104/screens/cards/product_screen.dart';
 import 'package:bbusrd104/screens/cards/setting_screen.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
@@ -258,8 +259,8 @@ class _MainScreenState extends State<MainScreen> {
               targetScreen = const GroupScreen();
               break;
             case 'Categories':
-              targetScreen = const CategoryScreen();
-              break;
+              Get.toNamed(AppRoutes.categories);
+              return;
             case 'Help':
               targetScreen = const HelpScreen();
               break;

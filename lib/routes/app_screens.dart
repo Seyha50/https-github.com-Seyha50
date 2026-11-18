@@ -2,6 +2,7 @@ import 'package:bbusrd104/bindings/category_binding.dart';
 import 'package:bbusrd104/routes/app_routes.dart';
 import 'package:bbusrd104/screens/cards/categories/add_category.dart';
 import 'package:bbusrd104/screens/cards/categories/category_screen.dart';
+import 'package:bbusrd104/screens/cards/categories/update_category.dart';
 import 'package:bbusrd104/screens/login_screen.dart';
 import 'package:get/get.dart';
 
@@ -22,6 +23,13 @@ class AppScreens {
     GetPage(
       name: AppRoutes.categoryAdd,
       page: () => const AddCategory(),
+      binding: CategoryBinding(),
+    ),
+    
+    GetPage(
+      name: AppRoutes.categoryEdit,
+      page: () => const UpdateCategory(),
+      binding: CategoryBinding(),
     ),
     
   ];
